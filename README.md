@@ -1,4 +1,4 @@
-# Meu Site Regra de Coloração Setupw
+# Meu Site Regra de Coloração SetupW
 
 Este é um site simples feito com HTML, CSS e Flask para aprender deploy no GitHub Pages.
 

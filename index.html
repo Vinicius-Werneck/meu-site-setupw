@@ -12,13 +12,10 @@
         }
 
         @keyframes pulse {
-
-            0%,
-            100% {
+            0%, 100% {
                 transform: scale(1);
                 opacity: 1;
             }
-
             50% {
                 transform: scale(1.05);
                 opacity: 0.8;
@@ -26,12 +23,9 @@
         }
 
         @keyframes float {
-
-            0%,
-            100% {
+            0%, 100% {
                 transform: translateY(0);
             }
-
             50% {
                 transform: translateY(-10px);
             }
@@ -70,91 +64,73 @@
 <body class="bg-gray-900 text-white">
 
     <!-- Hero Section com Imagem Dinâmica -->
-    <div
-        class="relative flex items-center justify-center bg-gradient-to-r from-gray-900 to-gray-800 overflow-hidden min-h-screen">
-        <!-- Imagem de fundo com efeito flutuante -->
-        <img src="static/img/teste1.png" alt="Gráfico"
-            class="absolute inset-0 w-full h-full object-cover opacity-30 floating-hero-bg">
+<div class="relative flex items-center justify-center bg-gradient-to-r from-gray-900 to-gray-800 overflow-hidden min-h-screen">
+    <!-- Imagem de fundo com efeito flutuante -->
+    <img src="static/img/teste1.png" alt="Gráfico" class="absolute inset-0 w-full h-full object-cover opacity-30 floating-hero-bg">
 
-        <div class="relative z-10 max-w-7xl mx-auto p-6 flex flex-col md:flex-row items-center gap-10">
-            <div class="md:w-1/2">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
-                    Transforme sua forma de operar com a <span class="text-blue-400">Regra de Coloração SetupW2</span>.
-                </h1>
-            </div>
-            <div class="md:w-1/2 hero-image-container relative group">
-                <!-- Imagem principal com efeito flutuante + hover -->
-                <img src="static/img/teste4.png" alt="Imagem SetupW"
-                    class="hero-image w-full rounded-lg shadow-2xl border-4 border-blue-300 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-xl group-hover:border-yellow-400 floating-hero-image">
-                <div
-                    class="hero-image-overlay absolute inset-0 opacity-0 group-hover:opacity-100 rounded-lg transition-opacity duration-500">
-                </div>
-                <div
-                    class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-yellow-400" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                    </svg>
-                    <span class="font-bold text-yellow-400">SetupW2</span> em ação
-                </div>
+    <div class="relative z-10 max-w-7xl mx-auto p-6 flex flex-col md:flex-row items-center gap-10">
+        <div class="md:w-1/2">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight text-white">
+                Transforme sua forma de operar com a <span class="text-blue-400">Regra de Coloração SetupW2</span>.
+            </h1>
+        </div>
+        <div class="md:w-1/2 hero-image-container relative group">
+            <!-- Imagem principal com efeito flutuante + hover -->
+            <img src="static/img/teste4.png" alt="Imagem SetupW"
+                class="hero-image w-full rounded-lg shadow-2xl border-4 border-blue-300 transform transition-all duration-500 group-hover:scale-105 group-hover:shadow-xl group-hover:border-yellow-400 floating-hero-image">
+            <div class="hero-image-overlay absolute inset-0 opacity-0 group-hover:opacity-100 rounded-lg transition-opacity duration-500"></div>
+            <div class="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200 flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                <span class="font-bold text-yellow-400">SetupW2</span> em ação
             </div>
         </div>
     </div>
+</div>
 
-    <style>
-        /* Animação para a imagem de fundo */
-        .floating-hero-bg {
-            animation: floatHeroBg 12s ease-in-out infinite;
+<style>
+    /* Animação para a imagem de fundo */
+    .floating-hero-bg {
+        animation: floatHeroBg 12s ease-in-out infinite;
+    }
+    
+    @keyframes floatHeroBg {
+        0%, 100% {
+            transform: translateY(0) translateX(0) scale(1);
         }
-
-        @keyframes floatHeroBg {
-
-            0%,
-            100% {
-                transform: translateY(0) translateX(0) scale(1);
-            }
-
-            25% {
-                transform: translateY(-20px) translateX(15px) scale(1.02);
-            }
-
-            50% {
-                transform: translateY(10px) translateX(-10px) scale(0.98);
-            }
-
-            75% {
-                transform: translateY(-10px) translateX(10px) scale(1.01);
-            }
+        25% {
+            transform: translateY(-20px) translateX(15px) scale(1.02);
         }
-
-        /* Animação para a imagem principal */
-        .floating-hero-image {
-            animation: floatHeroImage 8s ease-in-out infinite;
+        50% {
+            transform: translateY(10px) translateX(-10px) scale(0.98);
         }
-
-        @keyframes floatHeroImage {
-
-            0%,
-            100% {
-                transform: translateY(0) rotate(0deg);
-            }
-
-            25% {
-                transform: translateY(-10px) rotate(0.5deg);
-            }
-
-            50% {
-                transform: translateY(5px) rotate(-0.5deg);
-            }
-
-            75% {
-                transform: translateY(-5px) rotate(0.3deg);
-            }
+        75% {
+            transform: translateY(-10px) translateX(10px) scale(1.01);
         }
-    </style>
+    }
+
+    /* Animação para a imagem principal */
+    .floating-hero-image {
+        animation: floatHeroImage 8s ease-in-out infinite;
+    }
+    
+    @keyframes floatHeroImage {
+        0%, 100% {
+            transform: translateY(0) rotate(0deg);
+        }
+        25% {
+            transform: translateY(-10px) rotate(0.5deg);
+        }
+        50% {
+            transform: translateY(5px) rotate(-0.5deg);
+        }
+        75% {
+            transform: translateY(-5px) rotate(0.3deg);
+        }
+    }
+</style>
 
     <!-- Conheça o Setup Section -->
     <section class="relative bg-gray-800 py-16">
@@ -184,125 +160,118 @@
     </section>
 
     <!-- Visão Clara Section -->
-    <section class="relative bg-gray-700 text-gray-900 py-16 overflow-hidden">
-        <img src="static/img/teste8.jpeg" alt="Gráfico de Fundo"
-            class="absolute inset-0 w-full h-full object-cover opacity-10 floating-bg" loading="lazy">
+<section class="relative bg-gray-700 text-gray-900 py-16 overflow-hidden">
+    <img src="static/img/teste8.jpeg" alt="Gráfico de Fundo"
+        class="absolute inset-0 w-full h-full object-cover opacity-10 floating-bg" loading="lazy">
 
-        <div class="relative z-10 max-w-6xl mx-auto p-6">
-            <div class="bg-gray-400 rounded-xl p-10 shadow-2xl text-center">
-                <h2 class="text-4xl font-bold mb-6">Visão clara e objetiva do mercado.</h2>
-                <h3 class="text-2xl font-semibold mb-6">Não perca tempo com análises confusas</h3>
+    <div class="relative z-10 max-w-6xl mx-auto p-6">
+        <div class="bg-gray-400 rounded-xl p-10 shadow-2xl text-center">
+            <h2 class="text-4xl font-bold mb-6">Visão clara e objetiva do mercado.</h2>
+            <h3 class="text-2xl font-semibold mb-6">Não perca tempo com análises confusas</h3>
 
-                <div class="flex flex-col md:flex-row gap-6 justify-center mb-6">
-                    <div class="bg-blue-800 rounded-lg p-6 flex-1 shadow-lg text-white text-xl">
-                        📈 Mantém você no controle: a decisão final é sua.
-                    </div>
-                    <div class="bg-blue-800 rounded-lg p-6 flex-1 shadow-lg text-white text-xl">
-                        🤖 Combina indicadores técnicos para leitura imediata.
-                    </div>
-                    <div class="bg-blue-800 rounded-lg p-6 flex-1 shadow-lg text-white text-xl">
-                        ✔ Funciona para Day Trade e Swing Trade no ProfitChart.
-                    </div>
+            <div class="flex flex-col md:flex-row gap-6 justify-center mb-6">
+                <div class="bg-blue-800 rounded-lg p-6 flex-1 shadow-lg text-white text-xl">
+                    📈 Mantém você no controle: a decisão final é sua.
                 </div>
-
-                <p class="text-xl mb-6">
-                    Foque em uma leitura mais simples e direta.<br>
-                    <strong>Eficiência real.</strong>
-                </p>
+                <div class="bg-blue-800 rounded-lg p-6 flex-1 shadow-lg text-white text-xl">
+                    🤖 Combina indicadores técnicos para leitura imediata.
+                </div>
+                <div class="bg-blue-800 rounded-lg p-6 flex-1 shadow-lg text-white text-xl">
+                    ✔ Funciona para Day Trade e Swing Trade no ProfitChart.
+                </div>
             </div>
+
+            <p class="text-xl mb-6">
+                Foque em uma leitura mais simples e direta.<br>
+                <strong>Eficiência real.</strong>
+            </p>
         </div>
-    </section>
+    </div>
+</section>
 
-    <style>
-        .floating-bg {
-            animation: floatBackground 8s ease-in-out infinite;
+<style>
+    .floating-bg {
+        animation: floatBackground 8s ease-in-out infinite;
+    }
+    
+    @keyframes floatBackground {
+        0% {
+            transform: translateY(0) translateX(0);
         }
-
-        @keyframes floatBackground {
-            0% {
-                transform: translateY(0) translateX(0);
-            }
-
-            33% {
-                transform: translateY(-15px) translateX(10px);
-            }
-
-            66% {
-                transform: translateY(10px) translateX(-10px);
-            }
-
-            100% {
-                transform: translateY(0) translateX(0);
-            }
+        33% {
+            transform: translateY(-15px) translateX(10px);
         }
-    </style>
-
+        66% {
+            transform: translateY(10px) translateX(-10px);
+        }
+        100% {
+            transform: translateY(0) translateX(0);
+        }
+    }
+</style>
+    
     <!-- Aumente Performance Section -->
     <section class="relative bg-gray-700 py-16">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="bg-gray-800 rounded-lg p-8 flex flex-col md:flex-row items-center gap-10">
-                <div class="flex-1">
-                    <img src="static/img/teste9.jpeg" alt="Homem Gráfico" class="rounded-lg shadow-lg w-full"
-                        loading="lazy">
-                </div>
-                <div class="flex-1 text-white">
-                    <h2 class="text-4xl font-bold mb-6">Aumente sua <span class="text-yellow-400">performance!</span>
-                    </h2>
-                    <ul class="space-y-3 text-2xl">
-                        <li>✅ Entradas mais confiáveis</li>
-                        <li>✅ Redução de ansiedade nas decisões</li>
-                        <li>✅ Operações alinhadas com a tendência real</li>
-                    </ul>
-                    <a href="https://wa.me/5521974424452?text=Olá,%20quero%20comprar%20a%20Regra%20de%20Coloração%20SetupW2%20por%20R$479.%20Como%20faço?"
-                        target="_blank"
-                        class="inline-block mt-8 bg-red-500 hover:bg-red-600 py-3 px-8 rounded-full text-lg pulsate">
-                        Adquirir Regra de Coloração
-                    </a>
-                </div>
-            </div>
-        </div>
+      <div class="max-w-7xl mx-auto px-6">
+          <div class="bg-gray-800 rounded-lg p-8 flex flex-col md:flex-row items-center gap-10">
+              <div class="flex-1">
+                  <img src="static/img/teste9.jpeg" alt="Homem Gráfico" class="rounded-lg shadow-lg w-full"
+                      loading="lazy">
+              </div>
+              <div class="flex-1 text-white">
+                  <h2 class="text-4xl font-bold mb-6">Aumente sua <span class="text-yellow-400">performance!</span>
+                  </h2>
+                  <ul class="space-y-3 text-2xl">
+                      <li>✅ Entradas mais confiáveis</li>
+                      <li>✅ Redução de ansiedade nas decisões</li>
+                      <li>✅ Operações alinhadas com a tendência real</li>
+                  </ul>
+                  <a href="https://pay.kiwify.com.br/Z7SpsFL"
+                      target="_blank"
+                      class="inline-block mt-8 bg-red-500 hover:bg-red-600 py-3 px-8 rounded-full text-lg pulsate">
+                      Adquirir Regra de Coloração
+                  </a>
+              </div>
+          </div>
+      </div>
     </section>
 
     <!-- Vídeo Section -->
-    <section class="relative bg-gray-700 py-12 overflow-hidden"> <!-- Adicionei overflow-hidden -->
-        <img src="static/img/teste11.png" alt="Gráfico de Fundo"
-            class="absolute inset-0 w-full h-full object-cover opacity-10 floating-animation" loading="lazy">
-        <div class="max-w-5xl mx-auto text-center px-4 relative z-10">
-            <!-- Adicionei z-10 para garantir que o conteúdo fique acima da imagem -->
-            <h2 class="text-4xl font-bold mb-6 text-white">Descubra o Poder do Nosso Indicador Exclusivo</h2>
-            <p class="text-xl text-gray-300 mb-6">Assista ao vídeo para entender como nosso indicador pode transformar
-                suas operações no mercado financeiro!</p>
-            <iframe class="w-full aspect-video rounded-lg shadow-lg" src="https://www.youtube.com/embed/r1roRccVGZE"
-                frameborder="0" allowfullscreen></iframe>
-        </div>
-    </section>
+<section class="relative bg-gray-700 py-12 overflow-hidden"> <!-- Adicionei overflow-hidden -->
+    <img src="static/img/teste11.png" alt="Gráfico de Fundo"
+        class="absolute inset-0 w-full h-full object-cover opacity-10 floating-animation" loading="lazy">
+    <div class="max-w-5xl mx-auto text-center px-4 relative z-10"> <!-- Adicionei z-10 para garantir que o conteúdo fique acima da imagem -->
+        <h2 class="text-4xl font-bold mb-6 text-white">Descubra o Poder do Nosso Indicador Exclusivo</h2>
+        <p class="text-xl text-gray-300 mb-6">Assista ao vídeo para entender como nosso indicador pode transformar
+            suas operações no mercado financeiro!</p>
+        <iframe class="w-full aspect-video rounded-lg shadow-lg" src="https://www.youtube.com/embed/r1roRccVGZE"
+            frameborder="0" allowfullscreen></iframe>
+    </div>
+</section>
 
-    <style>
-        .floating-animation {
-            animation: floating 6s ease-in-out infinite;
+<style>
+    .floating-animation {
+        animation: floating 6s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+        0% {
+            transform: translateY(0px);
         }
-
-        @keyframes floating {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
-
-            100% {
-                transform: translateY(0px);
-            }
+        50% {
+            transform: translateY(-20px);
         }
-    </style>
+        100% {
+            transform: translateY(0px);
+        }
+    }
+</style>
 
     <!-- Comparação Section -->
     <section class="relative bg-gray-800 py-16">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-10 text-white">Veja no comparativo as vantagens exclusivas da
-                <span class="text-yellow-400">Regra de coloração SetupW2</span>
-                em relação aos concorrentes.</h2>
+            <h2 class="text-4xl md:text-5xl font-bold mb-10 text-white">Veja no comparativo as vantagens exclusivas da <span class="text-yellow-400">Regra de coloração SetupW2</span>
+              em relação aos concorrentes.</h2>
 
             <div class="flex flex-col md:flex-row gap-8 mb-12">
                 <div class="bg-gray-200 p-8 rounded-lg shadow-lg flex-1 text-gray-800">
@@ -330,7 +299,7 @@
                 </div>
             </div>
 
-            <a href="https://wa.me/5521974424452?text=Olá,%20quero%20comprar%20a%20Regra%20de%20Coloração%20SetupW2%20por%20R$479.%20Como%20faço?"
+            <a href="https://pay.kiwify.com.br/Z7SpsFL"
                 target="_blank"
                 class="inline-block bg-red-500 hover:bg-red-600 text-white py-3 px-8 rounded-full text-lg pulsate">
                 Adquirir Regra de Coloração
@@ -351,7 +320,7 @@
                 </ul>
                 <p class="mt-6 text-xl text-gray-400">Mensalidades que cabem no seu bolso. Oferta limitada!</p>
 
-                <a href="https://wa.me/5521974424452?text=Olá,%20quero%20comprar%20o%20SetupW2%20por%20R$479.%20Como%20faço?"
+                <a href="https://pay.kiwify.com.br/Z7SpsFL"
                     target="_blank"
                     class="inline-block mt-8 bg-red-500 hover:bg-red-600 text-white py-3 px-8 rounded-full text-lg pulsate">
                     Comprar SetupW2
